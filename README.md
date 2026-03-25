@@ -13,6 +13,37 @@ Basic validation and error handling is implemented to make sure API works proper
 - Sequelize ORM
 - SQLite
 
+## User Schema
+
+The User model contains the following fields:
+
+- id (INTEGER, primary key, auto-increment)
+- name (STRING, required)
+- username (STRING, required, unique)
+- email (STRING, required, unique)
+- age (INTEGER, optional)
+- phone (STRING, optional)
+- location (STRING, optional)
+- createdAt (DATE, automatically managed)
+- updatedAt (DATE, automatically managed)
+
+## Folder Strcucture
+
+```
+src/
+├── app.js       - Express app configuration
+├── server.js    - Server entry point
+├── config/      - Database configuration
+├── models/      - Sequelize models
+├── middleware/  - Custom middleware (error handling, etc.)
+└── modules/
+    └── user/
+        ├── routes/        - API routes
+        ├── controller/    - Request handlers
+        ├── service/       - Business logic
+        └── validation/    - Input validation logic
+```
+
 ## Main Functionality
 
 - Create new user
@@ -72,6 +103,10 @@ npm start
 Server will start on: http://localhost:3000/
 
 **NOTE**: No separate database setup is required. SQLite database will be created automatically when the server starts.
+
+### Environment Variables
+
+PORT=3000
 
 ## Assumptions
 
