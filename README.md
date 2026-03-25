@@ -86,3 +86,4 @@ Server will start on: http://localhost:3000/
 ## Deployment
 
 Deployed API Link:
+https://buyerforesight-backend-assignment-47f3.onrender.com/users/
